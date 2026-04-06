@@ -1,0 +1,17 @@
+venv/
+.env
+__pycache__/
+*.mid
+*.pdf
+*.mp3
+*.wav
+output/
+separated/
+Field_Test/
+pop_training/
+classical_training/
+jazz_training/
+models/
+tools/
+.DS_Store
+!pop_training/examples/
