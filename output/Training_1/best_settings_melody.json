@@ -1,0 +1,7 @@
+{
+  "onset_threshold": 0.8404199987643648,
+  "frame_threshold": 0.5628599032653023,
+  "minimum_note_length": 148.00293964037374,
+  "min_duration": 0.26666810881107467,
+  "quantization": 0.5
+}

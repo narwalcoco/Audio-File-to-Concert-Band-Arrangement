@@ -1,0 +1,8 @@
+{
+  "onset_threshold": 0.17945564,
+  "frame_threshold": 0.4935946,
+  "min_midi": 53,
+  "max_midi": 78,
+  "alignment_offset": 0.09453416,
+  "pitch_offset": -10
+}

@@ -1,0 +1,101 @@
+{
+  "woodwinds": [
+    {
+      "name": "Flute",
+      "transposition": 0,
+      "range": {
+        "min": 60,
+        "max": 96
+      },
+      "clef": "treble"
+    },
+    {
+      "name": "Clarinet",
+      "transposition": -2,
+      "range": {
+        "min": 50,
+        "max": 89
+      },
+      "clef": "treble"
+    },
+    {
+      "name": "Alto Saxophone",
+      "transposition": -9,
+      "range": {
+        "min": 40,
+        "max": 72
+      },
+      "clef": "treble"
+    }
+  ],
+  "brass": [
+    {
+      "name": "Trumpet",
+      "transposition": -2,
+      "range": {
+        "min": 52,
+        "max": 82
+      },
+      "clef": "treble"
+    },
+    {
+      "name": "Trombone",
+      "transposition": 0,
+      "range": {
+        "min": 40,
+        "max": 70
+      },
+      "clef": "bass"
+    },
+    {
+      "name": "Bass",
+      "transposition": 0,
+      "range": {
+        "min": 28,
+        "max": 58
+      },
+      "clef": "bass"
+    }
+  ],
+  "percussion": [
+    {
+      "name": "Snare Drum",
+      "type": "unpitched",
+      "midi_note": 38
+    },
+    {
+      "name": "Bass Drum",
+      "type": "unpitched",
+      "midi_note": 36
+    },
+    {
+      "name": "Cymbals",
+      "type": "unpitched",
+      "midi_note": 49
+    },
+    {
+      "name": "Congas",
+      "type": "unpitched",
+      "midi_note": 62
+    },
+    {
+      "name": "Bongos",
+      "type": "unpitched",
+      "midi_note": 60
+    },
+    {
+      "name": "Drumset",
+      "type": "unpitched",
+      "midi_note": 0
+    },
+    {
+      "name": "Timpani",
+      "type": "pitched",
+      "range": {
+        "min": 40,
+        "max": 55
+      },
+      "clef": "bass"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "onset_threshold": 0.65115666,
+  "frame_threshold": 0.34211132,
+  "minimum_note_length": 100.0
+}
