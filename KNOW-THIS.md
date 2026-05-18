@@ -27,4 +27,20 @@ We are taking the "Big Tech" approach of showing a highly polished, complete vis
 - **Layout:** Standard Trifold (1.0x Left, 1.6x Center, 1.0x Right).
 
 ---
+
+## **ADDITIONAL CONTEXT: The Evolution of Our Thought Process**
+
+### **Stage I: The Battle for Stability**
+We started with a "Standard AI" approach, but learned that environment stability is the true foundation. We pivoted from Python 3.12 to **Python 3.10** and locked all library versions to ensure our AI models (Demucs, Basic-Pitch) could function without crashing.
+
+### **Stage II: The Rust Revolution (Scaling the Brain)**
+Python was too slow for true optimization. We pivoted the training loop to **Rust** to unlock massive scale. This allowed us to jump from testing 10 settings at a time to **10,000 settings per generation**, processing 1 million evaluations in seconds.
+
+### **Stage III: The Sculpting Breakthrough (Subtractive Logic)**
+We realized that building a melody from silence was failing. We pivoted to **"Subtractive Sculpting"**: we flood the AI with a "Wall of Notes" and use the Genetic Algorithm to carve away the noise. This was our single biggest leap in accuracy.
+
+### **Stage IV: Surgical Refinement (Clarity & Monophony)**
+Once the pitches were found, we focused on "Musicality." We implemented **Pitch Hysteresis** (Stability) and **Strict Monophony** to stop the AI from "scooping" or playing messy chords. Every note is now a clear, unslurred 16th-note "blip."
+
+---
 **Permanent Record:** Refer to `notes.md` for the technical history and `knowts.md` for the simplified high-school explanations.
