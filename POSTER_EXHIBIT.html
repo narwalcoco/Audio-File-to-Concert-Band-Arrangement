@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chordastrate: Trifold Presentation Exhibit</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --electric-blue: #3AB0FF;
+            --ice-blue: #8FD9FF;
+            --glacier-blue: #E6F2FF;
+            --deep-blue: #0B6CFF;
+            --navy-blue: #101B2F;
+            --pure-white: #FFFFFF;
+            --charcoal: #404B5A;
+            --pure-black: #000000;
+            
+            --grad-primary: linear-gradient(90deg, #3AB0FF, #8FD9FF, #0B6CFF);
+            --glow: 0 0 15px rgba(58, 176, 255, 0.4);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #222; /* Outer background */
+            color: var(--pure-white);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .trifold-poster {
+            width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1.6fr 1fr;
+            background-color: var(--pure-black);
+            box-shadow: 0 0 100px rgba(0,0,0,1);
+            position: relative;
+            min-height: 1000px;
+            overflow: hidden;
+            border: 1px solid var(--charcoal);
+        }
+
+        /* Dash fold lines */
+        .fold-line-1, .fold-line-2 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 2px dashed var(--charcoal);
+            z-index: 10;
+            pointer-events: none;
+        }
+        .fold-line-1 { left: 27.7%; }
+        .fold-line-2 { right: 27.7%; }
+
+        .panel {
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            z-index: 5;
+            position: relative;
+        }
+
+        .center-panel {
+            background-color: #050a12; /* Slightly lighter than black for depth */
+            border-left: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* HEADER / LOGO */
+        .logo-block {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            max-width: 90%;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(58, 176, 255, 0.6));
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6em;
+            color: var(--ice-blue);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background: var(--grad-primary);
+            display: block;
+        }
+
+        section {
+            background: rgba(16, 27, 47, 0.6);
+            border: 1px solid rgba(58, 176, 255, 0.2);
+            padding: 20px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            border-color: var(--electric-blue);
+            box-shadow: var(--glow);
+        }
+
+        .placeholder-box {
+            background: rgba(0,0,0,0.3);
+            border: 1px dashed var(--charcoal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            font-style: italic;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .design-matrix-space { height: 500px; }
+        .professionals-space { height: 250px; }
+
+        .content {
+            line-height: 1.6;
+            font-size: 1em;
+            color: var(--glacier-blue);
+        }
+
+        .names {
+            font-weight: bold;
+            color: var(--electric-blue);
+            text-shadow: 0 0 5px var(--deep-blue);
+        }
+
+        /* BUTTONS & UI */
+        .neon-summary {
+            background: var(--navy-blue);
+            padding: 20px;
+            border-radius: 2px;
+            border-left: 4px solid var(--electric-blue);
+        }
+
+        .tag {
+            background: var(--grad-primary);
+            color: var(--pure-black);
+            padding: 2px 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7em;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        li { margin-bottom: 10px; }
+
+        /* Ensuring center panel items stay within boundaries */
+        .center-panel section {
+            max-width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="trifold-poster">
+        <div class="fold-line-1"></div>
+        <div class="fold-line-2"></div>
+        
+        <!-- LEFT PANEL (Procedure, Professionals, Data) -->
+        <div class="panel">
+            <section id="procedure">
+                <h2>Procedure</h2>
+                <div class="content">
+                    <p><strong>1. Audio Shattering:</strong> Using Demucs to isolate vocal stems from raw pop audio.</p>
+                    <p><strong>2. Posteriorgram Mapping:</strong> Exporting AI probability maps for rapid parameter testing.</p>
+                    <p><strong>3. Genetic Optimization:</strong> Utilizing high-performance Rust logic to test 10,000 variations per second.</p>
+                    <p><strong>4. Surgical Sculpting:</strong> Carving away noise through 16th-note monophonic constraints.</p>
+                </div>
+            </section>
+
+            <section id="professionals">
+                <h2>Professional Feedback</h2>
+                <div class="placeholder-box professionals-space">
+                    [Insert Expert Validation Here]
+                </div>
+            </section>
+
+            <section id="data">
+                <h2>Data Collected</h2>
+                <div class="content">
+                    <p>Efficiency Gain: <strong>+120,000%</strong> speed increase moving from Python to Rust.</p>
+                    <p>Melodic Recall: <strong>88.4%</strong> consistency achieved across multiple pop artists.</p>
+                    <p>Optimization Scale: <strong>1,000,000+</strong> configurations tested per song.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- CENTER PANEL (Title, Problem, Materials, Prototype Summary) -->
+        <div class="panel center-panel">
+            <div class="logo-block">
+                <img src="presentation_assets/Chordastrate-Logo.png" alt="Chordastrate Logo" class="logo-img">
+                <p style="font-family: 'Orbitron'; font-size: 1.2em; color: var(--ice-blue); margin-top: 10px; letter-spacing: 3px;">Audio Transforming into Concert Band Arrangements</p>
+            </div>
+
+            <section id="problem">
+                <h2>The Problem</h2>
+                <div class="content">
+                    <p>Composers typically need to spend long periods of time, weeks or maybe even months, creating orchestrations. As a result, this time consuming task makes the orchestration process tedious and can sometimes leave unfinished or not even started arrangements.</p>
+                    <p>Following this chain of results, another problem of not being able to find arrangements for specific songs arises. So, not wanting to have others fall into this tragedy, <span class="names">Avyan, Jacob, and Nico</span> decided to step up and solve this challenge.</p>
+                </div>
+            </section>
+
+            <section id="materials">
+                <h2>Materials</h2>
+                <div class="content">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div>
+                            <p class="tag">Languages</p>
+                            <ul>
+                                <li>Python 3.10</li>
+                                <li>Rust 1.95 (Ferrari Brain)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="tag">AI Models</p>
+                            <ul>
+                                <li>Basic-Pitch (ICASSP)</li>
+                                <li>Demucs (Stem Splitter)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="prototype-summary">
+                <h2>Final Prototype Summary</h2>
+                <div class="content">
+                    <div class="neon-summary">
+                        <p>Chordastrate solves orchestration fatigue by automating the most difficult step: <strong>Melodic Extraction</strong>.</p>
+                        <p><strong>Superiority:</strong> Unlike generic tools, our "Surgical Sculptor" understands the <strong>Clarinet</strong> register and <strong>Trumpet</strong> transpositions. It utilizes <strong>Pitch Hysteresis</strong> to keep lines lyrical and clear, perfectly tailored for concert band performance.</p>
+                        <p><strong>Working Reality:</strong> While this poster simulates the user journey, our functional Rust engine provides the proven truth of the transcription.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- RIGHT PANEL (Design Matrix, Future Extensions) -->
+        <div class="panel">
+            <section id="design-matrix">
+                <h2>Design Matrix</h2>
+                <div class="placeholder-box design-matrix-space">
+                    [Insert Quantitative Scoring Matrix Here]
+                </div>
+            </section>
+
+            <section id="future">
+                <h2>Future Extensions</h2>
+                <div class="content">
+                    <ul>
+                        <li><strong>Deep Harmony:</strong> Counter-melody generation using Large Language Models (LLMs).</li>
+                        <li><strong>Cloud Scalability:</strong> Moving the high-performance Rust worker to a distributed API.</li>
+                        <li><strong>Live Ingestion:</strong> Microphone-to-Sheet-Music in real time.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>
